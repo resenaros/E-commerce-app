@@ -1,6 +1,9 @@
 import { useState } from "react";
+// importing CSS file for styling
 import "./App.css";
+// importing the ProductList component, which renders the list of products
 import ProductList from "./components/ProductList";
+// importing Product images to be used in the product data inside the assets folder
 import Laptop from "./assets/Laptop.jpg";
 import Earbuds from "./assets/earbuds.webp";
 import Powerbank from "./assets/powerbank.jpg";
@@ -9,10 +12,11 @@ import DockingStation from "./assets/Docking-station.jpg";
 import CableManagementBox from "./assets/Cable-management-box.jpg";
 
 function App() {
-  // Only for display, no modifications will be made to this.
+  // Static array of product objects, each containing an id, image, name, price, and description
+  // initializing the array using useState hook. although it remains static to meet the requirements of the assignment.
   const [products] = useState([
     {
-      id: 1,
+      id: 1, // unique identifier for each product
       image: Laptop,
       name: "Laptop",
       price: 1300,
@@ -71,4 +75,5 @@ function App() {
   );
 }
 
+// Exporting the App component as the default export of this module
 export default App;
