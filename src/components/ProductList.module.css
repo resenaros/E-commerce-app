@@ -1,0 +1,106 @@
+.productItem {
+  border: 2px solid rgb(68, 2, 250);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  width: 100%;
+  max-width: 30rem;
+  padding: 10px;
+  overflow: hidden;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.productImage {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 8px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-items: center;
+  align-items: start; /* spacing between grid items */
+  margin: 0 auto;
+  max-width: 1500px; /* center horizontally */
+  padding: 20px; /* space inside the container */
+  box-sizing: border-box;
+  grid-auto-rows: 1fr;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid blue; /* Add a clear focus outline */
+  outline-offset: 2px;
+}
+
+.cartButton {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center the buttons and count horizontally */
+  gap: 10px; /* Add space between the buttons and count */
+  margin-top: 10px;
+}
+
+.minusButton,
+.plusButton {
+  padding: 5px 10px;
+  background-color: black; /* Green background */
+  color: blue;
+  border: 2px solid yellow;
+  cursor: pointer;
+  font-size: 1.3rem; /* Larger font for symbols */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular buttons */
+}
+
+.minusButton:hover,
+.plusButton:hover {
+  background-color: #cdda1f; /* Darker green on hover */
+}
+
+.cartCount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  width: 40px;
+  text-align: center; /* Center the count value */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional background for count */
+  border-radius: 8px; /* Rounded edges for count display */
+  padding: 5px;
+}
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Switch to 2 columns on medium screens */
+    gap: 15px;
+  }
+
+  .productItem {
+    width: 90%; /* Reduce item width for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Switch to 1 column on small screens */
+  }
+
+  .productItem {
+    font-size: 0.9rem; /* Adjust font size for readability on small screens */
+  }
+}
